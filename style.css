@@ -1,0 +1,121 @@
+/* Resetting margin and padding for all elements */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(179, 212, 226);
+    font-family: Arial, sans-serif;
+}
+
+/* Main container style */
+#container {
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: 3px 2px rgb(164, 205, 164);
+    height: 80vh;
+    width: 70vw;
+    max-width: 800px;  /* Add max-width for larger screens */
+    background-color: rgb(179, 225, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header, user area, and info area padding */
+#heading,
+#user-area,
+#info-area {
+    padding: 5%;
+}
+
+/* Label styles */
+label {
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* Input field styles */
+#user-input {
+    height: 6vh;
+    width: 26vw;
+    max-width: 300px; /* Ensures it doesn't become too wide on larger screens */
+    border-radius: 20px;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button styles */
+button {
+    margin-left: 25px;
+    height: 6vh;
+    width: 15vw;
+    max-width: 150px; /* Ensures it doesn't become too wide on larger screens */
+    border-radius: 20px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(179, 225, 244);
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+button:hover {
+    background-color: rgb(165, 212, 232);
+}
+
+/* Responsive styles using media queries */
+@media (max-width: 768px) {
+    #container {
+        width: 90vw; /* Wider container for smaller screens */
+        height: auto; /* Adjust height to content for smaller screens */
+        padding: 5%;
+    }
+
+    #user-input {
+        width: 80%; /* Input takes up more width on smaller screens */
+        height: 8vh; /* Slightly taller for better usability */
+    }
+
+    button {
+        width: 60%; /* Button takes up more width on smaller screens */
+        margin-top: 10px; /* Add margin for better spacing */
+        margin-left: 0; /* Center-align the button on small screens */
+    }
+
+    label {
+        font-size: large; /* Adjust font size for smaller screens */
+    }
+
+    #heading,
+    #user-area,
+    #info-area {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller heading for very small screens */
+    }
+
+    h2 {
+        font-size: 1rem; /* Smaller subheadings for very small screens */
+    }
+
+    #user-input,
+    button {
+        width: 100%; /* Almost full width on very small screens */
+        height: 7vh; /* Slightly shorter height */
+    }
+
+    button,label{
+        margin-left: 80px;
+    }
+}
