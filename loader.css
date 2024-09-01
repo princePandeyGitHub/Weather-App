@@ -1,0 +1,41 @@
+/* css for loader */
+#loader {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 6px solid #ccc;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+    .loader {
+        width: 30px;
+        height: 30px;
+        border-width: 4px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .loader {
+        width: 40px;
+        height: 40px;
+        border-width: 5px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .loader {
+        width: 60px;
+        height: 60px;
+        border-width: 7px;
+    }
+}
